@@ -1,15 +1,7 @@
 {
-    "builds": [
-      {
-        "src": "public/index.php",
-        "use": "@vercel/php"
+    "functions": {
+      "api/users/**/*.js": {
+        "maxDuration": 30
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/public/index.php"
-      }
-    ]
-  }
-  
+    }
+}
