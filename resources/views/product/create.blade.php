@@ -15,7 +15,6 @@
 
         .appbar {
             background-color: #FFA500;
-            /* Orange color */
             color: white;
             display: flex;
             justify-content: center;
@@ -28,7 +27,6 @@
             text-decoration: none;
             margin: 0 15px;
             background-color: #FFD700;
-            /* Yellow color for the buttons */
             padding: 10px 20px;
             border-radius: 4px;
         }
@@ -39,7 +37,6 @@
 
         .container {
             width: 50%;
-            /* Reduced width */
             margin: 30px auto;
             background-color: white;
             padding: 20px;
@@ -105,6 +102,49 @@
 
         .back-btn:hover {
             background-color: #0056b3;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 80%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 12px;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            input[type="date"],
+            select {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
     </style>
 </head>

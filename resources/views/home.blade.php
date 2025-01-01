@@ -15,13 +15,12 @@
 
         .appbar {
             background-color: #FFA500;
-            /* Orange color */
             color: white;
             display: flex;
             justify-content: center;
-            /* Center the items */
             align-items: center;
             padding: 10px;
+            flex-wrap: wrap;
         }
 
         .appbar a {
@@ -29,9 +28,9 @@
             text-decoration: none;
             margin: 0 15px;
             background-color: #FFD700;
-            /* Yellow color for the buttons */
             padding: 10px 20px;
             border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
         .appbar a:hover {
@@ -84,12 +83,10 @@
             background-color: #f2f2f2;
             color: #333;
             text-align: center;
-            /* Rata tengah untuk header */
         }
 
         td {
             text-align: center;
-            /* Rata tengah untuk data */
         }
 
         tr:nth-child(even) {
@@ -104,7 +101,6 @@
             display: flex;
             gap: 10px;
             justify-content: center;
-            /* Rata tengah untuk aksi */
         }
 
         .actions a,
@@ -145,19 +141,56 @@
 
         /* Responsiveness */
         @media screen and (max-width: 768px) {
+            .appbar a {
+                margin: 5px 10px;
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
             table {
                 display: block;
                 overflow-x: auto;
                 white-space: nowrap;
             }
 
-            .container {
-                width: 95%;
-            }
-
             th,
             td {
                 padding: 8px;
+                font-size: 14px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .actions a,
+            .actions button {
+                margin: 5px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            .actions a,
+            .actions button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .product-view-btn {
+                padding: 6px 12px;
             }
         }
     </style>
